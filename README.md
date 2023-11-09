@@ -2,8 +2,10 @@
   ``` use movies```
 
 **02  Create a collection called moviedetails ?**
-    ```  db.createCollection("moviedetails")
-        { ok: 1 }```
+    ``` 
+    db.createCollection("moviedetails")
+        { ok: 1 }
+        ```
 
  **03 Create above 5 movie documents into a moviedetails collection.**
 
