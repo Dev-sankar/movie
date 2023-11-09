@@ -30,6 +30,7 @@
 
 
 ```
+
 movies> db.moviedetails.find()
 [
   {
@@ -68,6 +69,7 @@ movies> db.moviedetails.find()
     year: 2009
   }
 ]
+
 ```
 
 **05. List James Cameron’s movies ?**
@@ -90,6 +92,8 @@ movies> db.moviedetails.find({Director:"james cameron"})
     year: 2009
   }
 ]
+
+
 ```
 
 
@@ -99,6 +103,7 @@ movies> db.moviedetails.find({Director:"james cameron"})
 
 
 ```
+
 movies> db.moviedetails.find({year:2009})
 [
   {
@@ -109,26 +114,35 @@ movies> db.moviedetails.find({year:2009})
     year: 2009
   }
 ]
+
+
 ```
 **07.Delete the movie which you don’t like ?**
 ```
+
 movies> db.moviedetails.remove({title:"Titanic",type:"romance",Director:"james cameron",year:1997})
 DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
 { acknowledged: true, deletedCount: 1 }
+
+
 ```
 
 
 **08.Add the movie which is your favourite ?**
+
 ```
 movies> db.moviedetails.insertOne({title:"LEO",type:"Action",Director:"vithushan",year:2023})
 {
   acknowledged: true,
   insertedId: ObjectId("654c8dca493d256bb41167e3")
 }
+
+
 ```
 
 
 **09.List movie Directed  by Christopher Nolan in 1994 ?**
+
 
 ```
 db.moviedetails.find({Director:"Christopher Nolan"},{year:1994})
@@ -138,6 +152,8 @@ db.moviedetails.find({Director:"Christopher Nolan"},{year:1994})
 
 
 **10.  List out the Director’s Name in your document. ?**
+ 
+ 
  ```
  movies> db.moviedetails.distinct("Director")
 [
@@ -147,6 +163,8 @@ db.moviedetails.find({Director:"Christopher Nolan"},{year:1994})
   'steven spielberg',
   'vithushan'
 ]
+
+
 ```
 
 
